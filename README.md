@@ -1,4 +1,4 @@
-# Addon Template
+# Blender Addon Template
 
 ## git アップロード先の変更
 
