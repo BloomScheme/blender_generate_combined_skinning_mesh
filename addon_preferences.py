@@ -73,7 +73,7 @@ def get_addon_preferences_value(key: str):
     return preferences[key]
 
 classes = [
-    STAGINGMODELING_PresetPreferences,
+    ADDONNAME_PresetPreferences,
 ]
 
 
