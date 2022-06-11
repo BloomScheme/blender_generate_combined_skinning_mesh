@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Generate Combined Skinning Mesh",
     "author": "Yusuke Sanekata",
-    "version": (0, 20, 1),
+    "version": (1, 0, 0),
     "blender": (3, 2, 0),
     "location": "View3D > Menu > Object > Convert > Generate Combined Skinning Mesh",
     "description": "",
