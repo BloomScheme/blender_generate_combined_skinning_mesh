@@ -36,6 +36,9 @@ def generate_combined_skinning_mesh(armature: Object):
     link_to_collection(mech_mesh_collection, mech_mesh)
 
     for child in children:
+        if child.hide_get():
+            continue
+
         isHardObject = child.parent_type == "BONE" and child.parent_bone != None
         group_name = child.parent_bone
 
