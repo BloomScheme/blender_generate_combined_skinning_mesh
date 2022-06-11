@@ -5,7 +5,7 @@ from .functions import generate_mech_mesh
 # from .functions import
 
 class COMBINEDSKINNINGMESH_OT_generate_combined_mech_mesh(bpy.types.Operator):
-    bl_idname = "COMBINEDSKINNINGMESH.generate_combined_mech_mesh"
+    bl_idname = "combinedskinningmesh.generate_combined_mech_mesh"
     bl_label = "Generate Combined Skinning Mesh"
     bl_description = "generate mech mesh from active armature's children."
     bl_options = {'REGISTER', 'UNDO'}

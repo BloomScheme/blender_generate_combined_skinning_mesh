@@ -13,8 +13,7 @@ bl_info = {
 import imp
 from . import addon_preferences
 from . import module_template
-from . import panels
-from .mech import operators as mech_operators
+from .skinning import operators as mech_operators
 
 
 def register():
