@@ -1,13 +1,13 @@
 import bpy
 
-from .functions import generate_mech_mesh
+from .functions import generate_combined_skinning_mesh
 
 # from .functions import
 
 class COMBINEDSKINNINGMESH_OT_generate_combined_mech_mesh(bpy.types.Operator):
-    bl_idname = "combinedskinningmesh.generate_combined_mech_mesh"
+    bl_idname = "combinedskinningmesh.generate_combined_skinning_mesh"
     bl_label = "Generate Combined Skinning Mesh"
-    bl_description = "generate mech mesh from active armature's children."
+    bl_description = "generate combined skinning mesh from active armature's children."
     bl_options = {'REGISTER', 'UNDO'}
 
     @classmethod
@@ -21,7 +21,7 @@ class COMBINEDSKINNINGMESH_OT_generate_combined_mech_mesh(bpy.types.Operator):
 
     def execute(self, context):
 
-        generate_mech_mesh(bpy.context.object)
+        generate_combined_skinning_mesh(bpy.context.object)
         
         return {'FINISHED'}
 

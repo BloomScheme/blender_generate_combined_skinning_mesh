@@ -17,7 +17,7 @@ from ..blender_lib.object import (
 )
 
 
-def generate_mech_mesh(armature: Object):
+def generate_combined_skinning_mesh(armature: Object):
     if armature.type != "ARMATURE":
         raise ValueError("select ARMATURE object.")
 
@@ -25,13 +25,13 @@ def generate_mech_mesh(armature: Object):
 
     children: List[Object] = filter_objects_by_type(armature.children_recursive, "MESH")
 
-    mech_mesh = generate_mesh_object("mech_mesh", [], [], [])
+    mech_mesh = generate_mesh_object("combined", [], [], [])
     deselect_all()
     set_active_object(armature)
     mech_mesh.select_set(True)
     bpy.ops.object.parent_set(type="ARMATURE_NAME")
 
-    mech_mesh_collection = get_or_create_collection("mech_mesh")
+    mech_mesh_collection = get_or_create_collection("Combined Skinning Mesh")
     link_to_collection(mech_mesh_collection, armature)
     link_to_collection(mech_mesh_collection, mech_mesh)
 
