@@ -1,27 +1,25 @@
-# Blender Addon Template
+# Blender Generate Combined Mech Mesh
 
-```bash
-git clone git@github.com:BloomScheme/Blender-Addon-Template.git [新Addon名]
-```
+for Blender 3.2.0
 
-## git アップロード先の変更
+Generate combined skinning mesh from Armature's children.
 
-```bash
-git remote set-url origin [new origin]
-```
+- Objects which is Parented by Bone-Relative will be assigned 1.0 weight to its parent bone.
+  - If Object has intermediate parent Objects, it refers their parent bone.
+- Otherwise, all Weights are inherited.
 
-## アドオンプリフィックスの変更
 
-全ファイル置換で `ADDONNAME` を置換
+アーマチュアの子を走査して、統合したスキニングメッシュを生成する。
+
+- ボーン相対で親子づけされたオブジェクトはボーンに対してウェイト1.0で割り当てられる。
+  - 中間にEmptyなどがある場合も、その親ボーンを参照してウェイトを割り当てる。
+- そうではないメッシュはそのままウェイトを引き継ぐ。
 
 ## setup
 
-```bash
-git submodule update --init --recursive
-```
+install and activete `Generate Combined Mech Mesh`
 
-## update
+## usage
 
-```bash
-git submodule update -i
-```
+- Select `Armature` object.
+- click `View3D > Menu > Object > Convert > Generate Combined Mech Mesh`.
