@@ -4,9 +4,9 @@ from .functions import generate_mech_mesh
 
 # from .functions import
 
-class COMBINEDMECHMESH_OT_generate_combined_mech_mesh(bpy.types.Operator):
-    bl_idname = "COMBINEDMECHMESH.generate_combined_mech_mesh"
-    bl_label = "Generate Combined Mech Mesh"
+class COMBINEDSKINNINGMESH_OT_generate_combined_mech_mesh(bpy.types.Operator):
+    bl_idname = "COMBINEDSKINNINGMESH.generate_combined_mech_mesh"
+    bl_label = "Generate Combined Skinning Mesh"
     bl_description = "generate mech mesh from active armature's children."
     bl_options = {'REGISTER', 'UNDO'}
 
@@ -28,10 +28,10 @@ class COMBINEDMECHMESH_OT_generate_combined_mech_mesh(bpy.types.Operator):
 
 
 def generate_combined_mech_mesh_menu(self, context):
-    self.layout.operator(COMBINEDMECHMESH_OT_generate_combined_mech_mesh.bl_idname, icon='OUTLINER_OB_ARMATURE')
+    self.layout.operator(COMBINEDSKINNINGMESH_OT_generate_combined_mech_mesh.bl_idname, icon='OUTLINER_OB_ARMATURE')
 
 
-classes = [COMBINEDMECHMESH_OT_generate_combined_mech_mesh]
+classes = [COMBINEDSKINNINGMESH_OT_generate_combined_mech_mesh]
 
 
 def register():

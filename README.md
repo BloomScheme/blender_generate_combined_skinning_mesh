@@ -1,4 +1,4 @@
-# Blender Generate Combined Mech Mesh
+# Blender Generate Combined Skinning Mesh
 
 for Blender 3.2.0
 
@@ -17,9 +17,9 @@ Generate combined skinning mesh from Armature's children.
 
 ## setup
 
-install and activete `Generate Combined Mech Mesh`
+install and activete `Generate Combined Skinning Mesh`
 
 ## usage
 
 - Select `Armature` object.
-- click `View3D > Menu > Object > Convert > Generate Combined Mech Mesh`.
+- click `View3D > Menu > Object > Convert > Generate Combined Skinning Mesh`.

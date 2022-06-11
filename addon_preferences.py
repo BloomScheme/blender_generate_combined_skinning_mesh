@@ -10,7 +10,7 @@ import os
 """
     Addon設定関連機能
 """
-class BLENDERCOMBINEDMECHMESH_PresetPreferences(bpy.types.AddonPreferences):
+class BLENDERCOMBINEDSKINNINGMESH_PresetPreferences(bpy.types.AddonPreferences):
     bl_idname = __package__
 
     # models_directory: bpy.props.StringProperty(
@@ -73,7 +73,7 @@ def get_addon_preferences_value(key: str):
     return preferences[key]
 
 classes = [
-    BLENDERCOMBINEDMECHMESH_PresetPreferences,
+    BLENDERCOMBINEDSKINNINGMESH_PresetPreferences,
 ]
 
 
