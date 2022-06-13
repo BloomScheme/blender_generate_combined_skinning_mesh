@@ -17,7 +17,7 @@ Generate combined skinning mesh from Armature's children.
 
 ## setup
 
-### clone
+### clone & init
 
 ```bash
 git clone https://github.com/BloomScheme/blender_generate_combined_skinning_mesh
