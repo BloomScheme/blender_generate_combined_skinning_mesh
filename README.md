@@ -19,13 +19,15 @@ Generate combined skinning mesh from Armature's children.
 
 ### clone & init
 
+at addons directory,
+
 ```bash
 git clone https://github.com/BloomScheme/blender_generate_combined_skinning_mesh
 cd blender_generate_combined_skinning_mesh
 git submodule update --init --recursive
 ```
 
-activete `Generate Combined Skinning Mesh`
+on Blender, activate `Generate Combined Skinning Mesh`
 
 ## usage
 
