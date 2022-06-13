@@ -1,3 +1,0 @@
-[submodule "blender_lib"]
-	path = blender_lib
-	url = git@github.com:BloomScheme/blender_lib.git
