@@ -17,7 +17,14 @@ Generate combined skinning mesh from Armature's children.
 
 ## setup
 
-install and activete `Generate Combined Skinning Mesh`
+### clone
+
+```bash
+git clone https://github.com/BloomScheme/blender_generate_combined_skinning_mesh
+git submodule update --init --recursive
+```
+
+activete `Generate Combined Skinning Mesh`
 
 ## usage
 
