@@ -25,15 +25,15 @@ def generate_combined_skinning_mesh(armature: Object):
 
     children: List[Object] = filter_objects_by_type(armature.children_recursive, "MESH")
 
-    mech_mesh = generate_mesh_object("combined", [], [], [])
+    combined_mesh = generate_mesh_object("combined", [], [], [])
     deselect_all()
     set_active_object(armature)
-    mech_mesh.select_set(True)
+    combined_mesh.select_set(True)
     bpy.ops.object.parent_set(type="ARMATURE_NAME")
 
     mech_mesh_collection = get_or_create_collection("Combined Skinning Mesh")
     link_to_collection(mech_mesh_collection, armature)
-    link_to_collection(mech_mesh_collection, mech_mesh)
+    link_to_collection(mech_mesh_collection, combined_mesh)
 
     for child in children:
         if child.hide_get():
@@ -59,4 +59,7 @@ def generate_combined_skinning_mesh(armature: Object):
                 freezed, group_name, list(range(len(freezed.data.vertices))), 1.0
             )
 
-        join_mesh_object_into(freezed, mech_mesh)
+        join_mesh_object_into(freezed, combined_mesh)
+    
+    set_active_object(armature)
+    combined_mesh.select_set(True)
