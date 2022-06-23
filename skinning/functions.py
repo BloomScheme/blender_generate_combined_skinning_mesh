@@ -28,6 +28,13 @@ def generate_combined_skinning_mesh(armature: Object):
     combined_mesh = generate_mesh_object("combined", [], [], [])
     deselect_all()
     set_active_object(armature)
+    # context.scene.collection.children[0]にリンクしているが、それがview layerから除外されていると
+    # RuntimeError: Error: Object 'combined' can't be selected because it is not in View Layer 'View Layer'!
+    # になるのでその時はscene collection直下にもリンクする
+    if not combined_mesh.visible_get(view_layer=bpy.context.view_layer):
+        scene_collection = bpy.context.scene.collection
+        scene_collection.objects.link(combined_mesh)
+
     combined_mesh.select_set(True)
     bpy.ops.object.parent_set(type="ARMATURE_NAME")
 
