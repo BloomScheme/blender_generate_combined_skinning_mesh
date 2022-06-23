@@ -34,11 +34,9 @@ def generate_combined_skinning_mesh(armature: Object):
     if not combined_mesh.visible_get(view_layer=bpy.context.view_layer):
         scene_collection = bpy.context.scene.collection
         scene_collection.objects.link(combined_mesh)
-        combined_mesh.select_set(True)
-        bpy.ops.object.parent_set(type="ARMATURE_NAME")
-    else:
-        combined_mesh.select_set(True)
-        bpy.ops.object.parent_set(type="ARMATURE_NAME")
+
+    combined_mesh.select_set(True)
+    bpy.ops.object.parent_set(type="ARMATURE_NAME")
 
     mech_mesh_collection = get_or_create_collection("Combined Skinning Mesh")
     link_to_collection(mech_mesh_collection, armature)
