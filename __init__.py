@@ -13,17 +13,16 @@ bl_info = {
 import imp
 from . import addon_preferences
 from . import module_template
-from .skinning import operators as mech_operators
+from .skinning import operators as skinning_operators
 
 
 def register():
-    mech_operators.register()
+    skinning_operators.register()
     # panels.register()
 
 
 def unregister():
-    addon_preferences.unregister()
-    module_template.unregister()
+    skinning_operators.unregister()
     # panels.unregister()
 
 
